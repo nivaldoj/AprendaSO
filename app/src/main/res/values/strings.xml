@@ -1,0 +1,154 @@
+<resources>
+    <string name="app_name">5 coisas sobre SO</string>
+
+    <string name="tituloIntro">
+        Olá, nesse aplicativo você aprenderá cinco princípios
+        dos Sistemas Operacionais. Clique em um dos títulos abaixo para ver mais! </string>
+
+    <string name="tituloHardware">1. O que é hardware?</string>
+    <string name="tituloSistemaOperacional">2. Sistema Operacional: O que é?</string>
+    <string name="tituloTarefa">3. O que é uma tarefa?</string>
+    <string name="tituloCicloVidaTarefa">4. Ciclo de vida de uma tarefa</string>
+    <string name="tituloArquivo">5. O que é um arquivo?</string>
+
+    <!-- Deixo aqui (já que não pude fazer nenhum mencionamento do tipo na própria interface
+    do aplicativo, tanto por falta de tempo como por falta de "conhecimento" para isso,
+    um agradecimento a Carlos Eduardo pelo material sobre Sistemas Operacionais, e todo
+    o crédito da maioria do conteúdo citado aqui nesse aplicativo. Muito obrigado por tudo, cara! -->
+
+    <!-- Texto do título 01 - Hardware -->
+    <string name="hardware01">
+        Hardware são os componentes de um sistema operacional. É a parte que você pode ver do computador, ou seja, todos
+        os componentes da sua estrutura física. Podemos citar como exemplo o Disco Rígido (HD), Mouse, Teclado, Monitor, dentre outros.
+    </string>
+    <string name="hardware02">
+        Principais componentes de Hardware:
+    </string>
+    <string name="hardware03">
+        Clique em um dos componentes para ver mais sobre.
+    </string>
+
+    <string name="hardwareRAMtitle">Memória RAM</string>
+    <string name="hardwareRAMtext">
+        É na memória principal que um sistema computacional armazena os programas e dados necessários
+        para suas tarefas, por isso o bom desempenho do sistema está relacionado a quantidade de
+        memória disponível.
+    </string>
+
+    <string name="hardwareROMtitle">Memória ROM</string>
+    <string name="hardwareROMtext">
+        A memória ROM geralmente possui pequena capacidade e são incorporadas aos sistemas com as
+        informações necessárias para o correto funcionamento dos mesmos, ou contém programas especiais,
+        como a BIOS.
+    </string>
+
+    <string name="hardwareHDtitle">Disco Rígido (HD)</string>
+    <string name="hardwareHDtext">
+        Os discos rígidos são memórias onde podem ser gravados os dados e programas que não serão
+        perdidos ao desligar o sistema computacional. Essas memórias são mais baratas e lentas do
+        que as memórias do tipo RAM.
+    </string>
+
+    <string name="hardwareProctitle">Processador</string>
+    <string name="hardwareProctext">
+        O processador é o cérebro do sistema computacional, e o responsável por executar as instruções
+        necessárias para a conclusão de uma tarefa. Contém a ULA, encarregada de realizar as operações
+        matemáticas requisitadas pelos programas.
+    </string>
+
+    <!-- Texto do título 02 - O que é um sistema operacional? -->
+    <string name="sistemaOperacional01">
+        Um sistema operacional é o software ou programa mais importante que é executado em um computador.
+        Possui tem um conjunto de programas cuja função é gerenciar os recursos do sistema, fornecendo uma interface entre o
+        computador e o usuário.
+    </string>
+
+    <string name="sistemaOperacional02">
+        As funcionalidades de um sistema operacional são várias, dentre elas podemos destacar o
+        gerenciamento do processador, da memória RAM instalada, dos dispositivos conectados,
+        dos arquivos do sistema e usuário a definição dos recursos que cada usuário pode acessar.
+    </string>
+
+    <!-- Texto do título 03 - O que é uma tarefa? -->
+    <string name="tarefa01">
+        Uma tarefa é a execução de um fluxo sequencial de instruções, construído para atender uma
+        finalidade específica, ou seja, resolver um problema.
+        \n\nNão confundir tarefa com aplicação! Uma aplicação é um conjunto de instruções escritas
+        para resolver um problema específico. Uma tarefa é a execução das instruções definidas em um programa.
+        \n\nUm sistema pode ser monotarefa ou multitarefa. Monotarefa é quando ele suporta a execução de
+        apenas uma tarefa ao mesmo tempo e Multitarefa é quando ele suporta a execução de várias tarefas
+        de forma concorrente, ou seja, ao mesmo tempo.
+    </string>
+
+    <!-- Texto do título 04 - Ciclo de vida de uma tarefa -->
+    <string name="ciclovida01">
+        O ciclo de vida de uma tarefa são os estados possíveis de uma tarefa ao passar pelo processador,
+        que vão desde o início ao fim de sua execução.
+    </string>
+
+    <string name="ciclovida02">
+        Ciclo de vida de um Sistema Multitarefa
+    </string>
+    <string name="ciclovida03">
+        Clique em uma das 4 Elipses para ler mais sobre os estados de uma tarefa
+    </string>
+
+    <string name="ciclovida_nova_titulo">Nova</string>
+    <string name="ciclovida_nova_texto">
+        Uma tarefa entra no estado de "nova" quando a mesma está sendo criada. O código da mesma
+        está sendo carregado para a memória com todas as informações necessárias.
+
+        \n\nEla vai de Nova para Pronta quando ela termina de ser carregada na memória.
+    </string>
+
+    <string name="ciclovida_pronta_titulo">Pronta</string>
+    <string name="ciclovida_pronta_texto">
+        A tarefa está na memória, pronta para a execução ou re-execução, aguardando a disponibilidade
+        do processador, em uma fila. Essa fila é organizada por algoritmos de escalonamento.
+
+        \n\nEla vai de Pronta para Executando quando chega a vez dela na fila de tarefas prontas.
+    </string>
+
+    <string name="ciclovida_suspensa_titulo">Suspensa</string>
+    <string name="ciclovida_suspensa_texto">
+        A tarefa está dependendo de dados externos que não estão disponíveis ainda, aguarda alguma
+        sincronização com outras tarefas ou aguarda o tempo passar.
+
+        \n\nEla vai de Suspensa para Pronta quando o recurso que a mesma estava esperando se torna
+        disponível.
+    </string>
+
+    <string name="ciclovida_executando_titulo">Executando</string>
+    <string name="ciclovida_executando_texto">
+        A tarefa está com o processador dedicado à ela, executando suas instruções.
+
+        \n\nEla pode ir de Executando para Suspensa quando ela solicita acesso a um recurso não
+        disponível, ou de Executando para Pronta quando se esgota o tempo destinado à ela no
+        processador.
+    </string>
+
+    <string name="ciclovida_terminada_titulo">Terminada</string>
+    <string name="ciclovida_terminada_texto">
+        A tarefa obteve seu processamento encerrado e a tarefa pode ser removida da memória.
+
+        \n\nA tarefa vem Executando para Terminada quando termina sua execução ou é abortada
+        devido a algum erro.
+    </string>
+
+    <!-- Texto do título 05 - O que é um arquivo? -->
+    <string name="arquivo01">
+        Um arquivo é um conjunto de dados armazenados em um dispositivo não volátil, ou seja, que não
+        irá perder os dados caso não tenha energia. Ele contém um nome ou outra referência que permita
+        que seja localizado posteriormente. Os arquivos são organizados em estruturas hierárquicas,
+        chamados diretórios ou pastas.
+    </string>
+
+    <string name="arquivo02">
+        Arquivos podem conter atributos, os quais os definem e distinguem dentre outros arquivos
+        no mesmo ambiente. Podemos citar como atributos principais o Nome, que uma cadeia de caracteres
+        que o identifica para o usuário, o Tipo do arquivo, que identifica o formato dos dados contidos
+        nesse arquivo, o Tamanho, no qual indica o tamanho do conteúdo do arquivo (seja em bytes ou registros),
+        as datas do arquivo, o proprietário do arquivo e as permissões.
+    </string>
+
+</resources>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.android.aprendaso.MainActivity">
+
+        <!-- Título inicial -->
+        <LinearLayout
+            android:id="@+id/ll_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                style="@style/Texto"
+                android:text="@string/tituloIntro"
+                />
+
+        </LinearLayout>
+
+        <!-- Título 01 -->
+        <RelativeLayout
+            android:id="@+id/rl_titulo01"
+            android:layout_below="@id/ll_intro"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="toggleContentHardware"
+            >
+
+            <TextView
+                style="@style/Cabecalho"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tituloHardware"
+                />
+
+            <ImageView
+                android:id="@+id/iv_titulo01"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cross"/>
+
+        </RelativeLayout>
+
+        <!-- Conteúdo do Título 01 -->
+        <LinearLayout
+            android:id="@+id/ll_titulo01_conteudo"
+            android:layout_below="@id/rl_titulo01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hardware01"
+                android:layout_marginBottom="16dp"
+                style="@style/Texto"/>
+
+            <TextView
+                style="@style/TextoTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hardware02"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_img_ram"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="true"
+                        android:onClick="setRAMText"
+                        android:src="@drawable/img_ram"/>
+
+                    <ImageView
+                        android:id="@+id/iv_img_rom"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="true"
+                        android:onClick="setROMText"
+                        android:src="@drawable/img_rom"/>
+
+                    <ImageView
+                        android:id="@+id/iv_img_hd"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="true"
+                        android:onClick="setHDText"
+                        android:src="@drawable/img_hd"/>
+
+                    <ImageView
+                        android:id="@+id/iv_img_proc"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="true"
+                        android:onClick="setProcText"
+                        android:src="@drawable/img_proc"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_hardware_component_title"
+                android:paddingTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hardware03"
+                style="@style/TextoTitulo"
+                />
+
+            <TextView
+                android:paddingTop="16dp"
+                android:id="@+id/tv_hardware_component_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Texto"
+                />
+
+        </LinearLayout>
+
+        <!-- Título 02 -->
+        <RelativeLayout
+            android:id="@+id/rl_titulo02"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/ll_titulo01_conteudo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="toggleContentSO"
+            >
+
+            <TextView
+                style="@style/Cabecalho"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tituloSistemaOperacional"
+                />
+
+            <ImageView
+                android:id="@+id/iv_titulo02"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cross"/>
+
+        </RelativeLayout>
+
+        <!-- Conteudo do Título 02 -->
+        <LinearLayout
+            android:id="@+id/ll_titulo02_conteudo"
+            android:layout_below="@id/rl_titulo02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/sistemaOperacional01"/>
+
+            <TextView
+                style="@style/Texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/sistemaOperacional02"/>
+
+
+        </LinearLayout>
+
+        <!-- Título 03 -->
+        <RelativeLayout
+            android:id="@+id/rl_titulo03"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/ll_titulo02_conteudo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="toggleContentTarefa"
+            >
+
+            <TextView
+                style="@style/Cabecalho"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tituloTarefa"
+                />
+
+            <ImageView
+                android:id="@+id/iv_titulo03"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cross"/>
+
+        </RelativeLayout>
+
+        <!-- Conteúdo do Título 03 -->
+        <LinearLayout
+            android:id="@+id/ll_titulo03_conteudo"
+            android:layout_below="@id/rl_titulo03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Texto"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/tarefa01"/>
+
+        </LinearLayout>
+
+        <!-- Título 04 -->
+        <RelativeLayout
+            android:id="@+id/rl_titulo04"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/ll_titulo03_conteudo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="toggleContentCicloTarefa"
+            >
+
+            <TextView
+                style="@style/Cabecalho"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tituloCicloVidaTarefa"
+                />
+
+            <ImageView
+                android:id="@+id/iv_titulo04"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cross"/>
+
+        </RelativeLayout>
+
+        <!-- Conteúdo do Título 04 -->
+        <LinearLayout
+            android:id="@+id/ll_titulo04_conteudo"
+            android:layout_below="@id/rl_titulo04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ciclovida01"
+                />
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                style="@style/TextoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ciclovida02"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/fl_ciclovida_tarefa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_ciclovida_fg_principal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ciclovida"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        android:id="@+id/ciclovida_nova"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:onClick="setTextCicloVidaNova"
+                        android:clickable="true"
+                        android:background="@android:color/transparent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/ciclovida_suspensa"
+                        android:layout_toStartOf="@+id/ciclovida_suspensa" />
+
+                    <Button
+                        android:id="@+id/ciclovida_pronta"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:onClick="setTextCicloVidaPronta"
+                        android:background="@android:color/transparent"
+                        android:layout_above="@+id/ciclovida_suspensa"
+                        android:layout_toRightOf="@+id/ciclovida_suspensa"
+                        android:layout_toEndOf="@+id/ciclovida_suspensa" />
+
+                    <Button
+                        android:id="@+id/ciclovida_terminada"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:onClick="setTextCicloVidaFinalizada"
+                        android:background="@android:color/transparent"
+                        android:layout_below="@+id/ciclovida_suspensa"
+                        android:layout_alignLeft="@+id/ciclovida_nova"
+                        android:layout_alignStart="@+id/ciclovida_nova" />
+
+                    <Button
+                        android:id="@+id/ciclovida_execucao"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:onClick="setTextCicloVidaExecutando"
+                        android:background="@android:color/transparent"
+                        android:layout_below="@+id/ciclovida_suspensa"
+                        android:layout_toRightOf="@+id/ciclovida_suspensa"
+                        android:layout_toEndOf="@+id/ciclovida_suspensa" />
+
+                    <Button
+                        android:id="@+id/ciclovida_suspensa"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:onClick="setTextCicloVidaSuspensa"
+                        android:background="@android:color/transparent"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:id="@+id/tv_ciclotarefa_titulo"
+                style="@style/TextoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ciclovida03"/>
+
+            <TextView
+                style="@style/Texto"
+                android:id="@+id/tv_ciclotarefa_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- Título 05 -->
+        <RelativeLayout
+            android:id="@+id/rl_titulo05"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/ll_titulo04_conteudo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="toggleContentArquivo"
+            >
+
+            <TextView
+                style="@style/Cabecalho"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tituloArquivo"
+                />
+
+            <ImageView
+                android:id="@+id/iv_titulo05"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cross"/>
+
+        </RelativeLayout>
+
+        <!-- Conteúdo do Título 05 -->
+        <LinearLayout
+            android:id="@+id/ll_titulo05_conteudo"
+            android:layout_below="@id/rl_titulo05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:paddingTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Texto"
+                android:text="@string/arquivo01"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                style="@style/Texto"
+                android:text="@string/arquivo02"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
